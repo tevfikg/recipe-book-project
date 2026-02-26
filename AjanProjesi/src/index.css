@@ -1,0 +1,39 @@
+@import "tailwindcss";
+
+/* Tailwind v4 — custom theme via CSS */
+@theme {
+  --color-cream: #FDF8F0;
+  --color-terracotta: #C2614F;
+  --color-terracotta-light: #D4806D;
+  --color-terracotta-dark: #A04D3C;
+  --color-charcoal: #2D2D2D;
+
+  --font-family-serif: "Playfair Display", Georgia, serif;
+  --font-family-sans: Inter, system-ui, sans-serif;
+}
+
+@layer base {
+  body {
+    background-color: var(--color-cream);
+    color: var(--color-charcoal);
+    font-family: var(--font-family-sans);
+  }
+  h1, h2, h3 {
+    font-family: var(--font-family-serif);
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-terracotta text-white px-5 py-2.5 rounded-lg font-medium hover:bg-terracotta-dark transition-colors duration-200 cursor-pointer;
+  }
+  .btn-secondary {
+    @apply bg-white text-charcoal border border-gray-200 px-5 py-2.5 rounded-lg font-medium hover:bg-gray-50 transition-colors duration-200 cursor-pointer;
+  }
+  .input {
+    @apply w-full border border-gray-200 rounded-lg px-4 py-2.5 text-charcoal bg-white focus:outline-none focus:ring-2 focus:border-terracotta transition-all;
+  }
+  .card {
+    @apply bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden;
+  }
+}
