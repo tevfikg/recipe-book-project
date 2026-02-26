@@ -44,9 +44,10 @@ cd server && npm run dev
 # Terminal 2 — Frontend
 cd client && npm run dev
 ```
+##Here the link
+https://recipevault-app.vercel.app/
 
-Frontend runs on http://localhost:5173
-Backend runs on http://localhost:3001
+#Can sign in with google account- o Auth
 
 ## User Roles
 
